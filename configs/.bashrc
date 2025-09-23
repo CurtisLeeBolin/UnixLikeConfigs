@@ -51,7 +51,11 @@ sprunge() {
   curl -F 'file=@-' https://0x0.st
 }
 
-## avoid duplicates
+# history size
+export HISTSIZE=10000
+export HISTFILESIZE=10000
+
+# avoid duplicates
 export HISTCONTROL=ignorespace:erasedups
 
 # append history entries
