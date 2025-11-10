@@ -34,7 +34,7 @@ alias pacman='pacman --color auto'
   source /usr/share/bash-completion/bash_completion
 
 # man with color
-export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
+export MANPAGER="bash -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
 export BAT_PAGER='less --RAW-CONTROL-CHARS'
 
 # less with syntax highlighting
