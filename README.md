@@ -1,4 +1,4 @@
-# Arch Linux Configs
+# Unix-Like Configs
 
 Some docs and config files I wrote and use.
 
