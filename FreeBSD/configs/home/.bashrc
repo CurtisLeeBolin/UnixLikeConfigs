@@ -27,6 +27,7 @@ alias diff='diff --unified --color'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+alias sudo='doas '
 
 # Use bash-completion, if available
 [[ $PS1 && -f /usr/local/share/bash-completion/bash_completion.sh ]] && \
