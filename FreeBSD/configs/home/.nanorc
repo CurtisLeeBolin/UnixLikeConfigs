@@ -1,0 +1,9 @@
+set nohelp
+set nowrap
+set smarthome
+set softwrap
+set tabsize 2
+set tabstospaces
+set minibar
+set minicolor gray,black
+set constantshow

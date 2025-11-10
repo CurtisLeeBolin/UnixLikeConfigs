@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 configs=(
   '.bashrc'
@@ -8,11 +8,11 @@ configs=(
 )
 
 for config in "${configs[@]}"; do
-  cp -v configs/${config} ~/
+  cp -v configs/home/${config} ~/
 done
 
 nano_syntax_highlights=(
-  $(find /usr/share/nano/ -type f -name *.nanorc)
+  $(find /usr/local/share/nano/ -type f -name *.nanorc)
 )
 
 for nano_syntax_highlight in "${nano_syntax_highlights[@]}"; do

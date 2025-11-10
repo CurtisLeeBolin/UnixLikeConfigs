@@ -1,6 +1,4 @@
-#!/bin/bash
-
-sudo pacman -Sy --noconfirm --needed bash bash-completion nano tmux curl lesspipe bat
+#!/usr/bin/env bash
 
 configs=(
   '.bashrc'
@@ -10,8 +8,7 @@ configs=(
 )
 
 for config in "${configs[@]}"; do
-  cp -v configs/${config} ~/
-  sudo cp -v configs/${config} /root/
+  cp -v configs/home/${config} ~/
 done
 
 nano_syntax_highlights=(
@@ -21,9 +18,4 @@ nano_syntax_highlights=(
 for nano_syntax_highlight in "${nano_syntax_highlights[@]}"; do
   echo "${nano_syntax_highlight}"
   echo "include ${nano_syntax_highlight}" >> ~/.nanorc
-  sudo bash -c "echo include ${nano_syntax_highlight} >> /root/.nanorc"
 done
-
-sudo cp -v configs/modules-load.d/* /etc/modules-load.d/
-
-sudo cp -v configs/sudoers.d/* /etc/sudoers.d/
