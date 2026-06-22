@@ -1,3 +1,3 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-pkg install doas nano lesspipe bat curl tmux
+pkg install doas bash nano lesspipe bat curl tmux
