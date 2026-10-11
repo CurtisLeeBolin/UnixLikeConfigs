@@ -1,15 +1,6 @@
 #!/usr/bin/env bash
 
-configs=(
-  '.bashrc'
-  '.bash_profile'
-  '.nanorc'
-  '.tmux.conf'
-)
-
-for config in "${configs[@]}"; do
-  cp -v configs/home/${config} ~/
-done
+cp -av configs/home/. ~/
 
 nano_syntax_highlights=(
   $(find /usr/share/nano/ -type f -name *.nanorc)
@@ -17,5 +8,5 @@ nano_syntax_highlights=(
 
 for nano_syntax_highlight in "${nano_syntax_highlights[@]}"; do
   echo "${nano_syntax_highlight}"
-  echo "include ${nano_syntax_highlight}" >> ~/.nanorc
+  echo "include ${nano_syntax_highlight}" >> ~/.config/nano/nanorc
 done
