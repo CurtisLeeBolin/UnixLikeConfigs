@@ -8,3 +8,6 @@ https://help.gnome.org/admin/system-admin-guide/stable/index.html.en
 
 # GDM: Disable User List
 `$ sudo -u gdm dbus-launch gsettings set org.gnome.login-screen disable-user-list true`
+
+# Gnome: Show Logout
+gsettings set org.gnome.shell always-show-log-out true
