@@ -69,5 +69,9 @@ export PATH=${HOME}/.local/bin:${PATH}
 
 # start tmux
 if [ -z "${TMUX}" ] && hash tmux 2>/dev/null; then
-  exec tmux attach
+  # 1. ALWAYS auto-start tmux for SSH connections
+  # 2. Local sessions ONLY auto-start tmux on the primary terminal (/dev/pts/0)
+  if [ -n "$SSH_CONNECTION" ] || [ -n "$SSH_CLIENT" ] || [[ "$(tty)" == "/dev/pts/0" ]]; then
+    exec tmux attach
+  fi
 fi
