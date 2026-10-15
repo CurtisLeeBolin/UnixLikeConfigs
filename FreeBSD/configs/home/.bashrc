@@ -52,8 +52,8 @@ sprunge() {
 }
 
 # history size
-export HISTSIZE=10000
-export HISTFILESIZE=10000
+export HISTSIZE=20000
+export HISTFILESIZE=20000
 
 # avoid duplicates
 export HISTCONTROL=ignorespace:erasedups
